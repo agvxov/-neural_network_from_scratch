@@ -73,6 +73,7 @@ class NN:
 	#		(4, 3), (4, 4), (4, 1)
 	#   // NOTE: notice how one layer is "missing",
 	#             as we dont need weights for the input layer
+	#   // NOTE: that is, without factoring in the weights
 	# }
 	architecture = None
 	# [Layer]

@@ -242,13 +242,14 @@ def pressure():
 	#  something more bloated such as `NN([7, 8, 8, 1], .5)`
 	# and significantly better than something longer
 	#  such as NN([7, 4, 4, 4, 1], .5)
+	# (atleast under reasonable training times)
 	n = NN([7, 4, 4, 1], .5)
 	#n = NN.load('2024-06-05=10:56:28.122959')
 	print(n)
 
-	n.train(training_data, epochs=5000)
+	n.train(training_data, epochs=10000)
 	print(n)
-	#n.save()
+	n.save()
 
 	# This makes our denormalization valid as a matrix operation
 	vd = np.vectorize(samples['denormalize'])
